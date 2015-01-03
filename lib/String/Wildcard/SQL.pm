@@ -1,10 +1,11 @@
 package String::Wildcard::SQL;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
-
-# VERSION
 
 use Exporter;
 our @ISA = qw(Exporter);
@@ -56,17 +57,6 @@ sub contains_wildcard {
 
 Return true if C<$str> contains wildcard pattern. Wildcard patterns include C<%>
 (meaning zero or more characters) and C<_> (exactly one character).
-
-
-=head1 TODO
-
-Support other variants. Transact-SQL supports character class, though I'm not
-sure how the escaping mechanism works. Access supports DOS-style wildcard (C<*>
-and C<?>) instead, and I'm also not sure whether there's something akin to
-backslash escape mechanism there.
-
-See L<String::Wildcard::Bash>'s TODO for the types of functions which I plan to
-add to this module.
 
 
 =head1 SEE ALSO
